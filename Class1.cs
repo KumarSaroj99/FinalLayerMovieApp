@@ -1,6 +1,6 @@
 ﻿namespace MovieLibrary
 {
-    public class AccountLibrary
+    public class MovieLibrary
     {
 
     }
