@@ -30,23 +30,6 @@ namespace MovieLibrary.Repository
             else
             {
                 movies.Add(Movie.AddNewMovie(id, name, year, genre));
-                //try
-                //{
-                //    Console.WriteLine("Enter Id : ");
-                //    int id = Convert.ToInt32(Console.ReadLine());
-                //    Console.WriteLine("Enter Movie Name : ");
-                //    string name = Console.ReadLine();
-                //    Console.WriteLine("Enter Year of release : ");
-                //    int year = Convert.ToInt32(Console.ReadLine());
-                //    Console.WriteLine("Enter Genre : ");
-                //    string genre = Console.ReadLine();
-                //    movies.Add(Movie.AddNewMovie(id, name, year, genre));
-                //    Console.WriteLine("---Your Movie is created successfully !---\n");
-                //}
-                //catch (FormatException fe)
-                //{
-                //    Console.WriteLine(fe.Message);
-                //}
 
             }
         }
@@ -58,8 +41,6 @@ namespace MovieLibrary.Repository
             }
             else
                 return movies;
-            //movies.ForEach(item => Console.WriteLine($"=============ID : {item.Id}=============\n" +
-            // $"{item}"));
         }
         public static Movie FindMovie(int id)
         {
@@ -69,19 +50,6 @@ namespace MovieLibrary.Repository
             else
                 throw new MovieNotFoundException("Movie not found\n");
         }
-        //public static void ModifyName(int id, string name)
-        //{
-        //    Movie findIDToModify = movies.Where(item => item.Id == id).FirstOrDefault();
-        //    if (findIDToModify != null)
-        //    {
-        //        //Console.WriteLine("Enter Name :");
-        //        //string name = Console.ReadLine();
-        //        findIDToModify.Name = name;
-        //        //Console.WriteLine("Your Name is Modified successfully !\n");
-        //    }
-        //    else
-        //        throw new MovieNotFoundException("Movie not found\n");
-        //}
         public static void RemoveMovie(int id)
         {
             Movie findID = movies.Where(item => item.Id == id).FirstOrDefault();
