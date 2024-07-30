@@ -13,7 +13,7 @@ namespace MovieLibrary.Services
 
     public class DataSerializer
     {
-        //public static string path = ConfigurationManager.AppSettings["filePath"].ToString();
+        
         public static string path = "C:\\Users\\sarojkumar.panda\\Desktop\\.netTraining\\FinalLayerMovieApp\\AccountLibrary\\Assets\\Movies.json";
         public static void Serialize(List<Movie> movies)
         {
