@@ -98,7 +98,6 @@ namespace MovieManagementApp.ViewController
                 int year = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Enter Genre : ");
                 string genre = Console.ReadLine();
-                //movies.Add(Movie.AddNewMovie(id, name, year, genre));
                 MovieManager.AddMovie(id, name, year, genre);
                 Console.WriteLine("---Your Movie is created successfully !---\n");
             }
@@ -117,15 +116,6 @@ namespace MovieManagementApp.ViewController
             toDisplay.ForEach(item => Console.WriteLine($"=============ID : {item.Id}=============\n" +
                                                          $"{item}"));
         }
-        //public static void Update()
-        //{
-        //    Console.WriteLine("Enter the ID : ");
-        //    int id = Convert.ToInt32(Console.ReadLine());
-        //    Console.WriteLine("Enter new Name :");
-        //    string name = Console.ReadLine();
-        //    MovieManager.ModifyName(id, name);
-        //    Console.WriteLine("Your Movie Name is Modified successfully !\n");
-        //}
         static void Remove()
         {
             Console.WriteLine("Enter the ID : ");
